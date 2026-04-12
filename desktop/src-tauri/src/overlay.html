@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{
-  background:transparent;
+html,body,:root{
+  background:transparent !important;
+  background-color:transparent !important;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;
   color:#fff;height:100%;overflow:hidden;
 }
@@ -19,7 +20,6 @@ html,body{
   margin-bottom:8px;padding:12px;
   border-radius:16px;
   background:rgba(30,30,30,0.88);
-  -webkit-backdrop-filter:blur(50px);
   border:1px solid rgba(255,255,255,0.20);
 }
 #messages:empty{display:none}
@@ -46,8 +46,6 @@ html,body{
   display:flex;align-items:center;gap:6px;
   border-radius:16px;padding:6px 8px;
   background:rgba(30,30,30,0.88);
-  -webkit-backdrop-filter:blur(50px);
-  box-shadow:0 20px 40px -12px rgba(0,0,0,0.4);
   border:1px solid rgba(255,255,255,0.20);
   flex-shrink:0;
 }

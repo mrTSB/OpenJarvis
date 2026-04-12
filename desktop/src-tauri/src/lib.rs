@@ -1210,6 +1210,8 @@ mod native_overlay {
 
     /// Raw pointer to the NSPanel, stored as usize for atomicity.
     static PANEL_PTR: AtomicUsize = AtomicUsize::new(0);
+    /// Raw pointer to the WKWebView inside the panel.
+    static WEBVIEW_PTR: AtomicUsize = AtomicUsize::new(0);
     /// Raw pointer to the previously-frontmost NSRunningApplication.
     static PREV_APP: AtomicUsize = AtomicUsize::new(0);
 
@@ -1288,6 +1290,23 @@ mod native_overlay {
         let _ = std::fs::write(&path, json);
     }
 
+    /// Apply every transparency trick to the WKWebView.
+    /// Called once at creation and again after the page finishes loading.
+    unsafe fn force_transparent(wv: *mut Object) {
+        let clear: *mut Object = msg_send![class!(NSColor), clearColor];
+        let _: () = msg_send![wv, _setDrawsBackground: NO];
+        let no_num: *mut Object = msg_send![class!(NSNumber), numberWithBool: NO];
+        let _: () = msg_send![wv, setValue: no_num forKey: nsstring("drawsBackground")];
+        let _: () = msg_send![wv, setUnderPageBackgroundColor: clear];
+        // Also inject CSS to nuke any remaining background
+        let js = nsstring(
+            "document.documentElement.style.background='transparent';\
+             document.body.style.background='transparent';"
+        );
+        let nil: *mut Object = std::ptr::null_mut();
+        let _: () = msg_send![wv, evaluateJavaScript: js completionHandler: nil];
+    }
+
     // ------------------------------------------------------------------
     // Public API (must be called on the main thread)
     // ------------------------------------------------------------------
@@ -1304,6 +1323,20 @@ mod native_overlay {
             decl.add_method(
                 sel!(canBecomeKeyWindow),
                 yes as extern "C" fn(&Object, Sel) -> BOOL,
+            );
+            decl.register();
+        }
+
+        // --- WKNavigationDelegate — re-apply transparency after load --
+        if Class::get("JarvisOverlayNavDelegate").is_none() {
+            let sup = Class::get("NSObject").unwrap();
+            let mut decl = ClassDecl::new("JarvisOverlayNavDelegate", sup).unwrap();
+            extern "C" fn did_finish(_: &Object, _: Sel, wv: *mut Object, _nav: *mut Object) {
+                unsafe { force_transparent(wv); }
+            }
+            decl.add_method(
+                sel!(webView:didFinishNavigation:),
+                did_finish as extern "C" fn(&Object, Sel, *mut Object, *mut Object),
             );
             decl.register();
         }
@@ -1393,12 +1426,17 @@ mod native_overlay {
             configuration: cfg
         ];
 
-        // Transparent webview background
-        let key = nsstring("drawsBackground");
-        let no_num: *mut Object = msg_send![class!(NSNumber), numberWithBool: NO];
-        let _: () = msg_send![wv, setValue: no_num forKey: key];
+        // ---- Make the webview fully transparent ----
+        force_transparent(wv);
+
+        // Set navigation delegate so we re-apply after page loads
+        let nav_cls = Class::get("JarvisOverlayNavDelegate").unwrap();
+        let nav_del: *mut Object = msg_send![nav_cls, alloc];
+        let nav_del: *mut Object = msg_send![nav_del, init];
+        let _: () = msg_send![wv, setNavigationDelegate: nav_del];
 
         let _: () = msg_send![panel, setContentView: wv];
+        WEBVIEW_PTR.store(wv as usize, Ordering::SeqCst);
 
         // Inject saved conversation into the HTML template, then load it.
         // Use the API server as the base URL so fetch() is same-origin.
@@ -1439,6 +1477,12 @@ mod native_overlay {
             return;
         }
         let panel = ptr as *mut Object;
+
+        // Re-apply transparency every time (the webview can reset it)
+        let wv_ptr = WEBVIEW_PTR.load(Ordering::SeqCst);
+        if wv_ptr != 0 {
+            force_transparent(wv_ptr as *mut Object);
+        }
 
         // Remember the currently-frontmost app so we can restore it.
         let ws: *mut Object = msg_send![class!(NSWorkspace), sharedWorkspace];
