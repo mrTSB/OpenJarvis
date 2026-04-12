@@ -1366,7 +1366,7 @@ mod native_overlay {
         let _: () = msg_send![panel, setCollectionBehavior: 257_u64];
         let _: () = msg_send![panel, setHidesOnDeactivate: NO];
         let _: () = msg_send![panel, setOpaque: NO];
-        let _: () = msg_send![panel, setHasShadow: YES];
+        let _: () = msg_send![panel, setHasShadow: NO];
         let _: () = msg_send![panel, setMovableByWindowBackground: YES];
 
         let clear: *mut Object = msg_send![class!(NSColor), clearColor];
