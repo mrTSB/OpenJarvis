@@ -85,13 +85,21 @@ const input=document.getElementById('input');
 const sendBtn=document.getElementById('send-btn');
 const messagesEl=document.getElementById('messages');
 let streaming=false,abort=null,model='qwen3.5:4b';
+let convId='', convTitle='Overlay chat', convCreated=Date.now();
 let messages=[];
+
+function genId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
 
 // Restore previous conversation
 try{
   const raw=document.getElementById('saved-data').textContent.trim();
-  if(raw&&raw!=='__SAVED_PLACEHOLDER__') messages=JSON.parse(raw);
+  if(raw&&raw!=='__SAVED_PLACEHOLDER__'){
+    const saved=JSON.parse(raw);
+    if(saved.id){convId=saved.id;convTitle=saved.title||convTitle;convCreated=saved.createdAt||convCreated;messages=saved.messages||[]}
+    else if(Array.isArray(saved)){messages=saved}
+  }
 }catch{}
+if(!convId) convId=genId();
 if(messages.length) renderAll();
 
 // Detect best available model
@@ -117,7 +125,9 @@ function bubble(role,text){
 }
 function scroll(){messagesEl.scrollTop=messagesEl.scrollHeight}
 function save(){
-  try{window.webkit.messageHandlers.overlay.postMessage('save:'+JSON.stringify(messages))}catch{}
+  const conv={id:convId,title:convTitle,createdAt:convCreated,updatedAt:Date.now(),model,
+    messages:messages.map((m,i)=>({id:convId+'_'+i,role:m.role,content:m.content,timestamp:m.timestamp||Date.now()}))};
+  try{window.webkit.messageHandlers.overlay.postMessage('save:'+JSON.stringify(conv))}catch{}
 }
 
 input.addEventListener('input',()=>{sendBtn.disabled=!input.value.trim()||streaming});
@@ -132,6 +142,7 @@ document.addEventListener('keydown',e=>{
 });
 sendBtn.addEventListener('click',()=>{if(streaming){abort&&abort.abort()}else send()});
 document.getElementById('new-btn').addEventListener('click',()=>{
+  convId=genId();convTitle='Overlay chat';convCreated=Date.now();
   messages=[];messagesEl.innerHTML='';save();input.focus();
 });
 
@@ -140,7 +151,8 @@ async function send(){
   if(!text||streaming)return;
   input.value='';sendBtn.disabled=true;
 
-  messages.push({role:'user',content:text});
+  messages.push({role:'user',content:text,timestamp:Date.now()});
+  if(messages.length===1) convTitle=text.slice(0,50)+(text.length>50?'...':'');
   bubble('user',text);scroll();save();
 
   streaming=true;abort=new AbortController();
@@ -178,7 +190,7 @@ async function send(){
     sendBtn.innerHTML=SEND;sendBtn.disabled=!input.value.trim();
     input.focus();
   }
-  if(acc){messages.push({role:'assistant',content:acc});save()}
+  if(acc){messages.push({role:'assistant',content:acc,timestamp:Date.now()});save()}
 }
 
 window.addEventListener('focus',()=>input.focus());
