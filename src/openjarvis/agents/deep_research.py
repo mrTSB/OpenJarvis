@@ -62,7 +62,7 @@ Reply naturally. No tools needed.
 **Quick data lookup** — "how many messages?", "list sources". \
 One knowledge_sql call, short answer.
 
-**People lookup** — "who is Retracted?", "tell me about my relationship \
+**People lookup** — "who is Redacted?", "tell me about my relationship \
 with Chris". Search messages and meetings by person name, summarize \
 the relationship — how often you communicate, what you discuss, recent \
 interactions.
@@ -73,7 +73,7 @@ a summary: messages sent/received, emails, meetings attended, documents \
 edited. Use knowledge_sql with timestamp filters for counts, then \
 knowledge_search for highlights.
 
-**Meeting prep / debrief** — "what did I discuss with Retracted?", \
+**Meeting prep / debrief** — "what did I discuss with Redacted?", \
 "prepare me for my meeting with Tighe". Search Granola meeting notes \
 by participant name, summarize key topics, decisions, and action items.
 

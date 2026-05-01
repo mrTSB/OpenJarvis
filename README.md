@@ -6,11 +6,11 @@
 
 ---
 
-> **[Documentation](Retracted)**
+> **[Documentation](Redacted)**
 >
-> **[Leaderboard](Retracted)**
+> **[Leaderboard](Redacted)**
 >
-> **[Roadmap](Retracted)**
+> **[Roadmap](Redacted)**
 
 ## Why OpenJarvis?
 
@@ -29,12 +29,12 @@ OpenJarvis is that stack. It is an opinionated framework for local-first persona
 | **Rust** | `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \| sh` |
 | **Git** | [git-scm.com](https://git-scm.com/) — or `brew install git` on macOS |
 
-> **macOS users:** see the full [macOS Installation Guide](Retracted) for a step-by-step walkthrough including Homebrew setup.
+> **macOS users:** see the full [macOS Installation Guide](Redacted) for a step-by-step walkthrough including Homebrew setup.
 
 ### Setup
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync                           # core framework
 uv sync --extra server             # + FastAPI server
@@ -51,7 +51,7 @@ You also need a local inference backend: [Ollama](https://ollama.com), [vLLM](ht
 
 ```bash
 # 1. Install and detect hardware
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync
 uv run maturin develop -m rust/crates/openjarvis-python/Cargo.toml   # required for memory + security features
@@ -121,7 +121,7 @@ jarvis bench skills --max-samples 5 --seeds 42
 
 Import from [Hermes Agent](https://github.com/NousResearch/hermes-agent) (~150 skills), [OpenClaw](https://github.com/openclaw/skills) (~13,700 community skills), or any GitHub repo. Skills follow the [agentskills.io](https://agentskills.io/specification) open standard.
 
-See the [Skills User Guide](https://open-jarvis.github.io/OpenJarvis/user-guide/skills/) and [Skills Tutorial](https://open-jarvis.github.io/OpenJarvis/tutorials/skills-workflow/) for details.
+See the [Skills User Guide](Redacted) and [Skills Tutorial](Redacted) for details.
 
 ### Built-in Agents
 
@@ -136,9 +136,9 @@ See the [Skills User Guide](https://open-jarvis.github.io/OpenJarvis/user-guide/
 | `native_openhands` | On-demand | CodeAct — generates and executes Python code |
 | `simple` | On-demand | Single-turn chat, no tools |
 
-See the [User Guide](https://open-jarvis.github.io/OpenJarvis/user-guide/morning-digest/) and [Tutorials](https://open-jarvis.github.io/OpenJarvis/tutorials/) for detailed setup instructions.
+See the [User Guide](Redacted) and [Tutorials](Redacted) for detailed setup instructions.
 
-Full documentation — including Docker deployment, cloud engines, development setup, and tutorials — at **[Retracted](Retracted)**.
+Full documentation — including Docker deployment, cloud engines, development setup, and tutorials — at **[Redacted](Redacted)**.
 
 ## Contributing
 
@@ -147,25 +147,25 @@ We welcome contributions! See the [Contributing Guide](CONTRIBUTING.md) for ince
 Quick start for contributors:
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync --extra dev
 uv run pre-commit install
 uv run pytest tests/ -v
 ```
 
-Browse the [Roadmap](Retracted) for areas where help is needed. Comment **"take"** on any issue to get auto-assigned.
+Browse the [Roadmap](Redacted) for areas where help is needed. Comment **"take"** on any issue to get auto-assigned.
 
 ## About
 
-OpenJarvis is part of [Intelligence Per Watt](https://www.intelligence-per-watt.ai/), a research initiative studying the efficiency of on-device AI systems. The project is developed at Retracted.
+OpenJarvis is part of [Intelligence Per Watt](https://www.intelligence-per-watt.ai/), a research initiative studying the efficiency of on-device AI systems. The project is developed at Redacted.
 
 ## Sponsors
 
-Retracted
+Redacted
 
 ## Citation
-Retracted
+Redacted
 
 ## License
 

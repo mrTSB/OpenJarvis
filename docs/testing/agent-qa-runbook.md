@@ -12,9 +12,9 @@ Manual testing scenarios for persistent agents in the CLI and desktop app.
 | Desktop app running | `uv run jarvis serve` + `cd frontend && npm run dev` |
 | Slack credentials | `SLACK_BOT_TOKEN`, `SLACK_APP_TOKEN` set, bot invited to test channel |
 | Gmail credentials | OAuth credentials.json downloaded, token generated |
-| Twitter credentials | All 5 env vars set (bearer + OAuth 1.0a) |
+| Redacted (microblog) credentials | All 5 env vars set (bearer + OAuth 1.0a) |
 | Discord credentials | Bot token set, bot invited to test server |
-| Telegram credentials | Bot token from @BotFather, test chat ID known |
+| Telegram credentials | Bot token from Redacted, test chat ID known |
 | Email credentials | SMTP/IMAP host + credentials for test account |
 
 ## CLI Agent Scenarios
@@ -57,7 +57,7 @@ Manual testing scenarios for persistent agents in the CLI and desktop app.
 | Gmail | Send email to test recipient | Poll unread -> handler fires | Reply in thread (threadId) | inbox_triager | [ ] |
 | Email (SMTP/IMAP) | Send via SMTP | IMAP poll UNSEEN | In-Reply-To header | inbox_triager | [ ] |
 | iMessage (BlueBubbles) | Send to phone number | N/A (send-only) | N/A | research_monitor | [ ] |
-| Twitter/X | Post tweet + send DM | Poll mentions | Reply (in_reply_to_tweet_id) | research_monitor | [ ] |
+| Redacted (microblog) | Post + send DM | Poll mentions | Reply (in_reply_to_tweet_id) | research_monitor | [ ] |
 | Discord | Post to #test-channel | Gateway message event | N/A | code_reviewer | [ ] |
 | Telegram | Send to test chat | Long-poll update | reply_to_message_id | research_monitor | [ ] |
 | WhatsApp (Baileys) | Send to test number | Baileys incoming msg | N/A | inbox_triager | [ ] |

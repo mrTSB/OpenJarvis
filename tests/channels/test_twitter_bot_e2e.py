@@ -289,18 +289,18 @@ class TestPromptBuilders:
             or "only from the context" in lc
         )
 
-    def test_bug_prompt_contains_github_url(self):
+    def test_bug_prompt_contains_issue_url_placeholder(self):
         prompt = _build_bug_prompt("bob", "456", "crash on startup")
-        assert "api.github.com/repos/open-jarvis/OpenJarvis/issues" in prompt
+        assert "Redacted" in prompt
         assert "http_request" in prompt
         assert "channel_send" in prompt
         assert "bob" in prompt
         assert "bug" in prompt
         assert "456" in prompt
 
-    def test_feature_prompt_contains_github_url(self):
+    def test_feature_prompt_contains_issue_url_placeholder(self):
         prompt = _build_feature_prompt("carol", "789", "add dark mode")
-        assert "api.github.com/repos/open-jarvis/OpenJarvis/issues" in prompt
+        assert "Redacted" in prompt
         assert "enhancement" in prompt
         assert "carol" in prompt
         assert "789" in prompt
@@ -323,13 +323,13 @@ class TestPromptBuilders:
             assert "<=280 characters" in prompt
             assert "lowercase prose" in prompt
 
-    def test_bug_prompt_includes_from_twitter_label(self):
+    def test_bug_prompt_includes_from_redacted_label(self):
         prompt = _build_bug_prompt("user", "1", "crash")
-        assert "from-twitter" in prompt
+        assert "from-redacted" in prompt
 
-    def test_feature_prompt_includes_from_twitter_label(self):
+    def test_feature_prompt_includes_from_redacted_label(self):
         prompt = _build_feature_prompt("user", "1", "feature")
-        assert "from-twitter" in prompt
+        assert "from-redacted" in prompt
 
 
 # =========================================================================
@@ -358,7 +358,7 @@ class TestMentionPolling:
                 {
                     "id": "111",
                     "author_id": "alice",
-                    "text": "@OpenJarvisAI how do I install?",
+                    "text": "@Redacted how do I install?",
                     "conversation_id": "111",
                 },
             ],
@@ -391,7 +391,7 @@ class TestMentionPolling:
         msg = handler.call_args[0][0]
         assert isinstance(msg, ChannelMessage)
         assert msg.sender == "alice"
-        assert msg.content == "@OpenJarvisAI how do I install?"
+        assert msg.content == "@Redacted how do I install?"
         assert msg.message_id == "111"
 
     def test_poll_tracks_since_id(self):
@@ -484,7 +484,7 @@ class TestEnvVarExpansion:
             ) as mock_req,
         ):
             result = tool.execute(
-                url="https://api.github.com/repos/open-jarvis/OpenJarvis/issues",
+                url="Redacted",
                 method="POST",
                 headers={
                     "Authorization": "Bearer $GITHUB_TOKEN",
@@ -595,7 +595,7 @@ class TestFullE2EFlow:
         picks between grounded/deferral prompts. The only tool the agent
         needs for a QUESTION is ``channel_send``.
         """
-        j = self._make_mock_jarvis(["check the docs at open-jarvis.github.io"])
+        j = self._make_mock_jarvis(["check the docs at Redacted"])
         tweet = DEMO_TWEETS[0]
         # mention_type is determined by _classify_mention in production; the
         # classifier itself is exercised in TestClassifyMentionDispatch. Flow
@@ -638,7 +638,7 @@ class TestFullE2EFlow:
         call_kwargs = j.ask.call_args
         assert "http_request" in call_kwargs[1]["tools"]
         assert "channel_send" in call_kwargs[1]["tools"]
-        assert "api.github.com" in call_kwargs[0][0]
+        assert "Redacted" in call_kwargs[0][0]
         assert "bug" in call_kwargs[0][0]
 
     def test_feature_request_flow(self):
@@ -776,7 +776,7 @@ class TestGitHubIssueCreation:
         mock_resp.status_code = 201
         mock_resp.text = json.dumps({
             "number": 42,
-            "html_url": "https://github.com/open-jarvis/OpenJarvis/issues/42",
+            "html_url": "Redacted",
         })
         mock_resp.headers = {"content-type": "application/json"}
 
@@ -790,7 +790,7 @@ class TestGitHubIssueCreation:
             ) as mock_req,
         ):
             result = tool.execute(
-                url="https://api.github.com/repos/open-jarvis/OpenJarvis/issues",
+                url="Redacted",
                 method="POST",
                 headers={
                     "Authorization": "Bearer $GITHUB_TOKEN",
@@ -799,10 +799,10 @@ class TestGitHubIssueCreation:
                 body=json.dumps({
                     "title": "memory_search tool crashes on empty index",
                     "body": (
-                        "reported via twitter by @bob_user: bug: the "
+                        "reported via Redacted by @redacted_user_a: bug: the "
                         "memory_search tool crashes when the index is empty"
                     ),
-                    "labels": ["bug", "from-twitter"],
+                    "labels": ["bug", "from-redacted"],
                 }),
             )
 
@@ -811,7 +811,7 @@ class TestGitHubIssueCreation:
 
         actual_call = mock_req.call_args
         assert actual_call[0][0] == "POST"
-        assert "api.github.com" in actual_call[0][1]
+        assert "Redacted" in actual_call[0][1]
         assert (
             actual_call[1]["headers"]["Authorization"]
             == "Bearer ghp_testtoken123"
@@ -819,8 +819,8 @@ class TestGitHubIssueCreation:
 
         body = actual_call[1]["content"]
         parsed_body = json.loads(body)
-        assert parsed_body["labels"] == ["bug", "from-twitter"]
-        assert "bob_user" in parsed_body["body"]
+        assert parsed_body["labels"] == ["bug", "from-redacted"]
+        assert "redacted_user_a" in parsed_body["body"]
 
     def test_create_feature_issue(self):
         tool = HttpRequestTool()
@@ -845,7 +845,7 @@ class TestGitHubIssueCreation:
             ) as mock_req,
         ):
             result = tool.execute(
-                url="https://api.github.com/repos/open-jarvis/OpenJarvis/issues",
+                url="Redacted",
                 method="POST",
                 headers={
                     "Authorization": "Bearer $GITHUB_TOKEN",
@@ -854,14 +854,14 @@ class TestGitHubIssueCreation:
                 body=json.dumps({
                     "title": "feature request: built-in scheduler UI",
                     "body": (
-                        "requested via twitter by @carol_eng: it would "
+                        "requested via Redacted by @redacted_user_b: it would "
                         "be great to have a built-in scheduler UI"
                     ),
-                    "labels": ["enhancement", "from-twitter"],
+                    "labels": ["enhancement", "from-redacted"],
                 }),
             )
 
         assert result.success is True
         body = json.loads(mock_req.call_args[1]["content"])
-        assert body["labels"] == ["enhancement", "from-twitter"]
-        assert "carol_eng" in body["body"]
+        assert body["labels"] == ["enhancement", "from-redacted"]
+        assert "redacted_user_b" in body["body"]

@@ -15,7 +15,7 @@ set -uo pipefail
 VENV=".venv/bin/python"
 M2_CONFIGS="src/openjarvis/evals/configs/distillation/m2"
 BASELINE_CONFIGS="src/openjarvis/evals/configs"
-M2_HOME="/scratch/user/jonsaadfalcon/openjarvis-m2"
+M2_HOME="/scratch/user/Redacted/openjarvis-m2"
 MODEL_FILTER=${1:-all}
 BENCH_FILTER=${2:-all}
 FORCE=${FORCE:-0}  # set FORCE=1 to re-run completed configs

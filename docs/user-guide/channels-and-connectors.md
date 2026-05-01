@@ -97,7 +97,7 @@ The fastest way is to use the App Manifest — paste this JSON to configure ever
 
 ### How it works
 
-- You DM @OpenJarvis in Slack → Socket Mode receives the event in real-time
+- You DM @Redacted in Slack → Socket Mode receives the event in real-time
 - Agent replies "Message received! Working on it now..." in a **thread** under your message
 - Agent researches (15-60s) → response appears in the same thread
 - If processing takes >60s: "Still working! Will reply ASAP" in the thread
@@ -174,7 +174,7 @@ The fastest way is to use the App Manifest — paste this JSON to configure ever
 4. **Add yourself as a test user** (required while app is unverified):
    [Open OAuth Consent Screen →](https://console.cloud.google.com/apis/credentials/consent)
    - Scroll to "Test users" → click "+ Add Users"
-   - Add your Gmail address (e.g. `Retracted`)
+   - Add your Gmail address (e.g. `Redacted`)
 
 5. **Add the redirect URI:**
    [Open Credentials →](https://console.cloud.google.com/apis/credentials)
@@ -298,7 +298,7 @@ We recommend creating **one Slack app** that handles both. The App Manifest belo
 
 8. **(Optional) Set the app icon:**
    - Go to Basic Information → Display Information
-   - Upload the OpenJarvis icon (Retracted)
+   - Upload the OpenJarvis icon (Redacted)
 
 ### Required Bot Token Scopes (reference)
 
@@ -340,7 +340,7 @@ We recommend creating **one Slack app** that handles both. The App Manifest belo
 
 - **Reinstall after scope changes:** Every time you add new scopes or change event subscriptions, you MUST reinstall the app.
 - **App-Level Token vs Bot Token:** The Bot Token (`xoxb-`) is for API calls. The App Token (`xapp-`) is for Socket Mode. You need both for DMs to work.
-- **Channel visibility:** The bot can only read channels it's been added to. Invite it with `/invite @OpenJarvis` in each channel you want indexed.
+- **Channel visibility:** The bot can only read channels it's been added to. Invite it with `/invite @Redacted` in each channel you want indexed.
 - **Thread replies:** If you reply in a thread, the bot sees it. New top-level messages also work.
 
 ### Troubleshooting
@@ -352,7 +352,7 @@ We recommend creating **one Slack app** that handles both. The App Manifest belo
 | Bot doesn't respond to DMs | Make sure Socket Mode is enabled, `message.im` event is subscribed, and the app was reinstalled after changes |
 | "missing_scope" error | Add the missing scope in OAuth & Permissions → Reinstall the app |
 | Bot not visible in Slack | Go to Install App → Reinstall to Workspace |
-| No messages found (data source) | The bot can only see channels it's been added to. Invite it: `/invite @OpenJarvis` in the channel |
+| No messages found (data source) | The bot can only see channels it's been added to. Invite it: `/invite @Redacted` in the channel |
 | Socket Mode connects but no events received | Verify `message.im` is in the manifest's `bot_events`, reinstall the app |
 
 ---

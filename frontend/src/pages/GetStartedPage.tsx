@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import { isTauri, checkHealth } from '../lib/api';
 
-/** Retracted: upstream release CDN URL removed — download links disabled */
+/** Redacted: upstream release CDN URL removed — download links disabled */
 const DOWNLOAD_ASSET_URL_BASE = '';
 
 function downloadHref(assetFile: string): string {
@@ -377,7 +377,7 @@ function SelfHostedView() {
             href={downloadHref(primary.file)}
             className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-medium transition-opacity cursor-pointer"
             style={{ background: 'var(--color-accent)', color: 'var(--color-on-accent)' }}
-            title={DOWNLOAD_ASSET_URL_BASE ? undefined : 'Retracted'}
+            title={DOWNLOAD_ASSET_URL_BASE ? undefined : 'Redacted'}
             onClick={(e) => {
               if (!DOWNLOAD_ASSET_URL_BASE) e.preventDefault();
             }}
@@ -398,7 +398,7 @@ function SelfHostedView() {
                 href={downloadHref(p.file)}
                 className="text-[11px] underline underline-offset-2 transition-colors"
                 style={{ color: 'var(--color-text-secondary)' }}
-                title={DOWNLOAD_ASSET_URL_BASE ? undefined : 'Retracted'}
+                title={DOWNLOAD_ASSET_URL_BASE ? undefined : 'Redacted'}
                 onClick={(e) => {
                   if (!DOWNLOAD_ASSET_URL_BASE) e.preventDefault();
                 }}
@@ -418,7 +418,7 @@ function SelfHostedView() {
           <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
             Clone and install (Python 3.10+ required):
           </p>
-          <CodeBlock code={"git clone Retracted\ncd OpenJarvis\nuv sync"} />
+          <CodeBlock code={"git clone Redacted\ncd OpenJarvis\nuv sync"} />
           <p className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
             Then get started:
           </p>
@@ -429,7 +429,7 @@ function SelfHostedView() {
           <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
             Launch the API server to get the full UI in your browser:
           </p>
-          <CodeBlock code={"git clone Retracted\ncd OpenJarvis\nuv sync --extra server\njarvis serve --port 8000"} />
+          <CodeBlock code={"git clone Redacted\ncd OpenJarvis\nuv sync --extra server\njarvis serve --port 8000"} />
           <p className="text-xs" style={{ color: 'var(--color-text-tertiary)' }}>
             The chat, dashboard, energy profiling, and cost comparison all run
             locally on your machine.
@@ -440,7 +440,7 @@ function SelfHostedView() {
           <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
             Deploy with Docker Compose for a zero-setup hosted instance:
           </p>
-          <CodeBlock code={"git clone Retracted\ncd OpenJarvis\ndocker compose -f deploy/docker/docker-compose.yml up -d"} />
+          <CodeBlock code={"git clone Redacted\ncd OpenJarvis\ndocker compose -f deploy/docker/docker-compose.yml up -d"} />
           <p className="text-xs" style={{ color: 'var(--color-text-tertiary)' }}>
             This starts both the API server and Ollama. The web UI is bundled and
             served automatically at port 8000.

@@ -19,7 +19,7 @@ your machine and the frontend connects via `localhost`.
 ### One-command setup
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 ./scripts/quickstart.sh
 ```
@@ -39,7 +39,7 @@ If you prefer to run each step yourself:
 === "Step 1: Clone and install"
 
     ```bash
-    git clone Retracted
+    git clone Redacted
     cd OpenJarvis
     uv sync --extra server
     uv run maturin develop -m rust/crates/openjarvis-python/Cargo.toml
@@ -85,7 +85,7 @@ processing happens on your local machine — the app connects to the backend you
 **Step 1.** Start the backend (same as Browser App):
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 ./scripts/quickstart.sh
 ```
@@ -94,11 +94,11 @@ cd OpenJarvis
 
 | Platform | Download |
 |----------|----------|
-| macOS (Apple Silicon) | [:material-download: **OpenJarvis.dmg**](Retracted) |
-| Windows (64-bit) | [:material-download: **OpenJarvis-setup.exe**](Retracted) |
-| Linux (DEB) | [:material-download: **OpenJarvis.deb**](Retracted) |
-| Linux (RPM) | [:material-download: **OpenJarvis.rpm**](Retracted) |
-| Linux (AppImage) | [:material-download: **OpenJarvis.AppImage**](Retracted) |
+| macOS (Apple Silicon) | [:material-download: **OpenJarvis.dmg**](Redacted) |
+| Windows (64-bit) | [:material-download: **OpenJarvis-setup.exe**](Redacted) |
+| Linux (DEB) | [:material-download: **OpenJarvis.deb**](Redacted) |
+| Linux (RPM) | [:material-download: **OpenJarvis.rpm**](Redacted) |
+| Linux (AppImage) | [:material-download: **OpenJarvis.AppImage**](Redacted) |
 
 The app connects to `http://localhost:8000` automatically.
 
@@ -110,12 +110,12 @@ The app connects to `http://localhost:8000` automatically.
     This is normal for open-source apps distributed outside the App Store.
 
 !!! tip "All releases"
-    Browse all versions on Retracted.
+    Browse all versions on Redacted.
 
 ### Build from source
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis/desktop
 npm install
 npm run tauri build
@@ -133,7 +133,7 @@ programmatically. Every feature is accessible from the terminal.
 ### Install
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync
 uv run maturin develop -m rust/crates/openjarvis-python/Cargo.toml
@@ -177,7 +177,7 @@ For programmatic access, the `Jarvis` class provides a high-level sync API.
 ### Install
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync
 uv run maturin develop -m rust/crates/openjarvis-python/Cargo.toml

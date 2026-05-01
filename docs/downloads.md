@@ -17,21 +17,21 @@ processing happens on your local machine — the app connects to the backend you
 !!! info "Backend required"
     Start the backend before opening the desktop app. The quickstart script handles everything:
     ```bash
-    git clone Retracted
+    git clone Redacted
     ```
 
 ### Download
 
 | Platform | Download | Notes |
 |----------|----------|-------|
-| macOS (Apple Silicon) | [:material-download: **OpenJarvis.dmg**](Retracted) | M1/M2/M3/M4 Macs |
-| Windows (64-bit) | [:material-download: **OpenJarvis-setup.exe**](Retracted) | Windows 10+ |
-| Linux (DEB) | [:material-download: **OpenJarvis.deb**](Retracted) | Ubuntu, Debian |
-| Linux (RPM) | [:material-download: **OpenJarvis.rpm**](Retracted) | Fedora, RHEL |
-| Linux (AppImage) | [:material-download: **OpenJarvis.AppImage**](Retracted) | Any distro |
+| macOS (Apple Silicon) | [:material-download: **OpenJarvis.dmg**](Redacted) | M1/M2/M3/M4 Macs |
+| Windows (64-bit) | [:material-download: **OpenJarvis-setup.exe**](Redacted) | Windows 10+ |
+| Linux (DEB) | [:material-download: **OpenJarvis.deb**](Redacted) | Ubuntu, Debian |
+| Linux (RPM) | [:material-download: **OpenJarvis.rpm**](Redacted) | Fedora, RHEL |
+| Linux (AppImage) | [:material-download: **OpenJarvis.AppImage**](Redacted) | Any distro |
 
 !!! tip "All releases"
-    Browse all versions on Retracted.
+    Browse all versions on Redacted.
 
 ### macOS: "app is damaged" fix
 
@@ -68,7 +68,7 @@ The backend (Ollama, Python API server, inference) runs separately on your machi
 ### Build from source
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis/desktop
 npm install
 npm run tauri build
@@ -86,7 +86,7 @@ your machine and the frontend connects via `localhost`.
 ### One-command setup
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 ./scripts/quickstart.sh
 ```
@@ -106,7 +106,7 @@ If you prefer to run each step yourself:
 === "Step 1: Clone and install"
 
     ```bash
-    git clone Retracted
+    git clone Redacted
     cd OpenJarvis
     uv sync --extra server
     cd frontend && npm install && cd ..
@@ -153,7 +153,7 @@ programmatically. Every feature is accessible from the terminal.
 ### Install
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync
 ```
@@ -201,7 +201,7 @@ For programmatic access, the `Jarvis` class provides a high-level sync API.
 ### Install
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync
 ```

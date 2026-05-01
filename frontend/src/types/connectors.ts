@@ -131,10 +131,10 @@ export const SOURCE_CATALOG: ConnectorMeta[] = [
         label: 'In the left sidebar, click "Install App" → click "Install to Workspace" → click "Allow". After installing, copy the "Bot User OAuth Token" that appears (starts with xoxb-)',
       },
       {
-        label: 'Paste the bot token below. After connecting, invite the bot to channels you want indexed by typing /invite @OpenJarvis in each channel',
+        label: 'Paste the bot token below. After connecting, invite the bot to channels you want indexed by typing /invite @Redacted in each channel',
       },
       {
-        label: '(Optional) Set the app icon: in the left sidebar click "Basic Information" → scroll to "Display Information" → upload the OpenJarvis logo (icon asset: Retracted)',
+        label: '(Optional) Set the app icon: in the left sidebar click "Basic Information" → scroll to "Display Information" → upload the OpenJarvis logo (icon asset: Redacted)',
       },
     ],
     inputFields: [

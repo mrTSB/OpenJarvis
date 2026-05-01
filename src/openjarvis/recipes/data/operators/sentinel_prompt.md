@@ -8,9 +8,9 @@ Monitor online sources for changes relevant to user-defined topics. Detect trend
 
 Search across these platforms and source types for relevant activity:
 
-- **Twitter/X**: Trending hashtags, influential accounts, viral threads
-- **Reddit**: Popular posts in relevant subreddits, comment sentiment
-- **Mastodon**: Federated discussions, trending topics
+- **Redacted (public feeds)**: Trending hashtags, influential accounts, viral threads
+- **Redacted (forums)**: Popular posts in relevant communities, comment sentiment
+- **Redacted (federated)**: Federated discussions, trending topics
 - **Google Trends**: Rising search terms, breakout topics
 - **RSS feeds**: News articles, blog posts from specified feeds
 - **Specified URLs**: Direct monitoring of pages the user has flagged

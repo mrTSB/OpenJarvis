@@ -11,7 +11,7 @@ import json
 import sys
 from pathlib import Path
 
-# Jon's Step 1 baselines — used when a local baseline result doesn't exist
+# Redacted's Step 1 baselines — used when a local baseline result doesn't exist
 STEP1_BASELINES = {
     "2b":  {"toolcall15": 33.3, "pinchbench": 69.6, "livecodebench": 5.6,  "taubench": 70.0, "taubench-telecom": 0.0,  "gaia": 0.0,  "liveresearch": 0.0,  "liveresearchbench": None},
     "9b":  {"toolcall15": 46.7, "pinchbench": 95.7, "livecodebench": 17.6, "taubench": 85.0, "taubench-telecom": 80.0, "gaia": 38.0, "liveresearch": 75.0, "liveresearchbench": None},

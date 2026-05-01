@@ -6,7 +6,7 @@ to larger models.
 
 ## Requirements
 
-- OpenJarvis installed (`git clone Retracted && cd OpenJarvis && uv sync` or `uv sync --extra dev`)
+- OpenJarvis installed (`git clone Redacted && cd OpenJarvis && uv sync` or `uv sync --extra dev`)
 - An inference engine running with multiple models available
 
 ## Usage

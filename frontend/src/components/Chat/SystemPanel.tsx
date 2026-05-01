@@ -258,7 +258,7 @@ export function SystemPanel() {
             style={{ color: 'var(--color-text-tertiary)' }}
           >
             <ExternalLink size={10} />
-            Retracted
+            Redacted
           </span>
         </section>
       </div>

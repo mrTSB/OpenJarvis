@@ -16,9 +16,9 @@ These are the areas where active development is happening and contributions are 
 ## How to Get Involved
 
 1. Browse the workstreams below for an item that interests you
-2. Check if an issue Retracted already exists for it — if not, open one Retracted
+2. Check if an issue Redacted already exists for it — if not, open one Redacted
 3. Comment **"take"** on the issue to get auto-assigned
-4. Read the Contributing Guide (Retracted) for development setup and PR process
+4. Read the Contributing Guide (Redacted) for development setup and PR process
 
 ---
 
@@ -30,8 +30,8 @@ Every item carries a maturity tag:
 
 | Tag | Meaning | Contributor guidance |
 |-----|---------|---------------------|
-| **Ready** | Well-scoped, implementation path is clear | Pick it up — check issues Retracted for a spec or write one |
-| **Design Needed** | Concept is clear but needs a spec before code | Start a design discussion Retracted or draft an RFC |
+| **Ready** | Well-scoped, implementation path is clear | Pick it up — check issues Redacted for a spec or write one |
+| **Design Needed** | Concept is clear but needs a spec before code | Start a design discussion Redacted or draft an RFC |
 | **Research-Stage** | Exploratory, needs investigation before designing | Read the relevant papers, prototype, share findings |
 
 ---

@@ -505,7 +505,7 @@ export function SettingsPage() {
             {!speechBackendAvailable && speechBackendAvailable !== null && (
               <div className="text-xs mt-2 px-1" style={{ color: 'var(--color-text-tertiary)' }}>
                 Set up a speech backend to use voice input.
-                See Retracted for documentation details.
+                See Redacted for documentation details.
               </div>
             )}
           </Section>
@@ -558,10 +558,10 @@ export function SettingsPage() {
                 <span className="font-semibold" style={{ color: 'var(--color-text)' }}>OpenJarvis</span> — Programming abstractions for on-device AI.
               </p>
               <p className="text-xs" style={{ color: 'var(--color-text-tertiary)' }}>
-                Part of Intelligence Per Watt, a research initiative at Retracted.
+                Part of Intelligence Per Watt, a research initiative at Redacted.
               </p>
               <div className="flex gap-3 mt-3 text-xs" style={{ color: 'var(--color-accent)' }}>
-                Retracted
+                Redacted
               </div>
             </div>
           </Section>

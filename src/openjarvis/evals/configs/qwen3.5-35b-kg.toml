@@ -1,6 +1,6 @@
 # Experiment 2: LifelongAgent KG on Qwen3.5-35B-A3B (smaller MoE)
 # Compare against 122B-A10B on same 19 KG questions
-# Uses port 8000 (Orhun's vLLM instance)
+# Uses port 8000 (Redacted's vLLM instance)
 
 [meta]
 name = "qwen3.5-35b-kg"

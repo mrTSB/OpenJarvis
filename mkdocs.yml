@@ -1,12 +1,12 @@
 site_name: OpenJarvis
-site_url: Retracted
+site_url: Redacted
 site_description: Personal AI, On Personal Devices
 site_author: OpenJarvis Contributors
-repo_url: Retracted
-repo_name: Retracted
+repo_url: Redacted
+repo_name: Redacted
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; 2026 Retracted
+copyright: Copyright &copy; 2026 Redacted
 
 theme:
   name: material
@@ -137,7 +137,7 @@ extra:
     index_name: ""   # e.g. "openjarvis"
   social:
     - icon: material/source-repository
-      link: Retracted
+      link: Redacted
 
 nav:
   - Home: index.md

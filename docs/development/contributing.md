@@ -18,7 +18,7 @@ contribute code to OpenJarvis.
 ### Clone and Install
 
 ```bash
-git clone Retracted
+git clone Redacted
 cd OpenJarvis
 uv sync --extra dev
 ```

@@ -31,7 +31,7 @@ OpenJarvis is that stack. It is an opinionated framework for local-first persona
     Run the full chat UI locally with one script:
 
     ```bash
-    git clone Retracted
+    git clone Redacted
     cd OpenJarvis
     ./scripts/quickstart.sh
     ```
@@ -47,16 +47,16 @@ OpenJarvis is that stack. It is an opinionated framework for local-first persona
     **Step 1.** Start the backend:
 
     ```bash
-    git clone Retracted
+    git clone Redacted
     cd OpenJarvis
     ./scripts/quickstart.sh
     ```
 
     **Step 2.** Download and open the desktop app:
 
-    [Download for macOS](Retracted){ .md-button .md-button--primary }
+    [Download for macOS](Redacted){ .md-button .md-button--primary }
 
-    Also available for [Windows](Retracted), [Linux (DEB)](Retracted), and [Linux (RPM)](Retracted). See the [Downloads](downloads.md) page for details.
+    Also available for [Windows](Redacted), [Linux (DEB)](Redacted), and [Linux (RPM)](Redacted). See the [Downloads](downloads.md) page for details.
 
     The app connects to `http://localhost:8000` automatically.
 
@@ -199,12 +199,12 @@ OpenJarvis is built around five composable layers. Each has a clean interface an
 
 ## Research
 
-OpenJarvis is part of [Intelligence Per Watt](https://www.intelligence-per-watt.ai/), a research initiative studying the efficiency of on-device AI systems. Developed at Retracted.
+OpenJarvis is part of [Intelligence Per Watt](https://www.intelligence-per-watt.ai/), a research initiative studying the efficiency of on-device AI systems. Developed at Redacted.
 
 ## Citation
 
-Retracted
+Redacted
 
 ## Sponsors
 
-Retracted
+Redacted

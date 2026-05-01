@@ -25,7 +25,7 @@ from openjarvis.core.types import Message, Role
 from openjarvis.engine.cloud import CloudEngine
 from openjarvis.traces.store import TraceStore
 
-HOME = Path(os.environ.get("OPENJARVIS_HOME", "/scratch/user/jonsaadfalcon/openjarvis-m1"))
+HOME = Path(os.environ.get("OPENJARVIS_HOME", "/scratch/user/Redacted/openjarvis-m1"))
 DB = HOME / "traces.db"
 LOG = HOME / "a1_feedback_log.jsonl"
 MODEL = "claude-sonnet-4-6"

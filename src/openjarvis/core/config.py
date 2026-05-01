@@ -1299,7 +1299,7 @@ class SkillsConfig:
     auto_discover: bool = True
     auto_sync: bool = False
     nudge_interval: int = 15
-    index_repo: str = "https://github.com/openjarvis/skill-index.git"
+    index_repo: str = "Redacted"
     index_dir: str = "~/.openjarvis/skill-index/"
     max_depth: int = 5
     sandbox_dangerous: bool = True
