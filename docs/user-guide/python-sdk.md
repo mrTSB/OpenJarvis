@@ -12,7 +12,7 @@ The OpenJarvis Python SDK provides a high-level interface for interacting with l
 ## Installation
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 uv sync
 ```

@@ -253,18 +253,13 @@ export function SystemPanel() {
             </span>
           </button>
 
-          <a
-            href="https://open-jarvis.github.io/OpenJarvis/leaderboard"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 mt-1.5 px-3 py-1.5 text-[11px] rounded-lg transition-colors"
+          <span
+            className="flex items-center gap-1.5 mt-1.5 px-3 py-1.5 text-[11px] rounded-lg"
             style={{ color: 'var(--color-text-tertiary)' }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-accent)')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--color-text-tertiary)')}
           >
             <ExternalLink size={10} />
-            View Leaderboard
-          </a>
+            Retracted
+          </span>
         </section>
       </div>
     </div>

@@ -505,7 +505,7 @@ export function SettingsPage() {
             {!speechBackendAvailable && speechBackendAvailable !== null && (
               <div className="text-xs mt-2 px-1" style={{ color: 'var(--color-text-tertiary)' }}>
                 Set up a speech backend to use voice input.
-                See the <a href="https://open-jarvis.github.io/OpenJarvis/user-guide/tools/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)' }}>documentation</a> for details.
+                See Retracted for documentation details.
               </div>
             )}
           </Section>
@@ -558,25 +558,10 @@ export function SettingsPage() {
                 <span className="font-semibold" style={{ color: 'var(--color-text)' }}>OpenJarvis</span> — Programming abstractions for on-device AI.
               </p>
               <p className="text-xs" style={{ color: 'var(--color-text-tertiary)' }}>
-                Part of Intelligence Per Watt, a research initiative at Stanford SAIL.
+                Part of Intelligence Per Watt, a research initiative at Retracted.
               </p>
-              <div className="flex gap-3 mt-3 text-xs">
-                <a
-                  href="https://scalingintelligence.stanford.edu/blogs/openjarvis/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--color-accent)' }}
-                >
-                  Project site
-                </a>
-                <a
-                  href="https://open-jarvis.github.io/OpenJarvis/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--color-accent)' }}
-                >
-                  Documentation
-                </a>
+              <div className="flex gap-3 mt-3 text-xs" style={{ color: 'var(--color-accent)' }}>
+                Retracted
               </div>
             </div>
           </Section>

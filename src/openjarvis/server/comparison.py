@@ -281,8 +281,7 @@ COMPARISON_HTML = """\
     <div class="cta-sub">Install OpenJarvis and run AI locally
       with zero API costs.</div>
     <div class="code-block">
-      <code>git clone https://github.com/open-jarvis/OpenJarvis.git
-&& cd OpenJarvis && uv sync</code>
+      <code>git clone Retracted && cd OpenJarvis && uv sync</code>
       <button class="copy-btn" id="copy-btn">Copy</button>
     </div>
   </div>
@@ -424,8 +423,8 @@ tpcSlider.addEventListener('input', updateCalc);
 
 // -- Copy button --
 document.getElementById('copy-btn').addEventListener('click', () => {
-  const cmd = 'git clone https://github.com/open-jarvis/'
-    + 'OpenJarvis.git && cd OpenJarvis && uv sync';
+  const cmd = 'git clone Retracted'
+    + ' && cd OpenJarvis && uv sync';
   navigator.clipboard.writeText(cmd).then(() => {
     const btn = document.getElementById('copy-btn');
     btn.textContent = 'Copied!';

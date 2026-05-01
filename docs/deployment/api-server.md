@@ -7,7 +7,7 @@ OpenJarvis includes an OpenAI-compatible API server built on FastAPI and uvicorn
 The server requires the `[server]` extra (FastAPI + uvicorn):
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 uv sync --extra server
 ```

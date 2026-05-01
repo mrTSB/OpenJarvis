@@ -1,4 +1,4 @@
-"""Check for newer OpenJarvis releases on GitHub."""
+"""Check for newer OpenJarvis releases (URL Retracted)."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 _CACHE_PATH = Path("~/.openjarvis/version-check.json").expanduser()
 _CACHE_TTL = 86400  # 24 hours
-_GITHUB_API = "https://api.github.com/repos/open-jarvis/OpenJarvis/releases/latest"
+_RELEASES_META_URL = "Retracted"
 _CHECK_COMMANDS = {"ask", "chat", "serve"}
 
 
@@ -48,7 +48,7 @@ def _do_check() -> None:
 
 
 def _get_latest_version(current: str) -> str | None:
-    """Return latest version string from cache or GitHub API."""
+    """Return latest version string from cache or releases metadata (Retracted)."""
     try:
         if _CACHE_PATH.exists():
             data = json.loads(_CACHE_PATH.read_text())
@@ -62,7 +62,7 @@ def _get_latest_version(current: str) -> str | None:
         import urllib.request
 
         req = urllib.request.Request(
-            _GITHUB_API,
+            _RELEASES_META_URL,
             headers={"Accept": "application/vnd.github.v3+json"},
         )
         with urllib.request.urlopen(req, timeout=3) as resp:

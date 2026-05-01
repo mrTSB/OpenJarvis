@@ -143,7 +143,7 @@ Run this from your home directory or any neutral parent folder.
 
 ```bash
 cd ~
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 ```
 

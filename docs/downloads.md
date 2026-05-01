@@ -17,22 +17,21 @@ processing happens on your local machine — the app connects to the backend you
 !!! info "Backend required"
     Start the backend before opening the desktop app. The quickstart script handles everything:
     ```bash
-    git clone https://github.com/open-jarvis/OpenJarvis.git && cd OpenJarvis
-    ./scripts/quickstart.sh
+    git clone Retracted
     ```
 
 ### Download
 
 | Platform | Download | Notes |
 |----------|----------|-------|
-| macOS (Apple Silicon) | [:material-download: **OpenJarvis.dmg**](https://github.com/open-jarvis/OpenJarvis/releases/download/desktop-latest/OpenJarvis_0.1.0_aarch64.dmg) | M1/M2/M3/M4 Macs |
-| Windows (64-bit) | [:material-download: **OpenJarvis-setup.exe**](https://github.com/open-jarvis/OpenJarvis/releases/download/desktop-latest/OpenJarvis_0.1.0_x64-setup.exe) | Windows 10+ |
-| Linux (DEB) | [:material-download: **OpenJarvis.deb**](https://github.com/open-jarvis/OpenJarvis/releases/download/desktop-latest/OpenJarvis_0.1.0_amd64.deb) | Ubuntu, Debian |
-| Linux (RPM) | [:material-download: **OpenJarvis.rpm**](https://github.com/open-jarvis/OpenJarvis/releases/download/desktop-latest/OpenJarvis-0.1.0-1.x86_64.rpm) | Fedora, RHEL |
-| Linux (AppImage) | [:material-download: **OpenJarvis.AppImage**](https://github.com/open-jarvis/OpenJarvis/releases/download/desktop-latest/OpenJarvis_0.1.0_amd64.AppImage) | Any distro |
+| macOS (Apple Silicon) | [:material-download: **OpenJarvis.dmg**](Retracted) | M1/M2/M3/M4 Macs |
+| Windows (64-bit) | [:material-download: **OpenJarvis-setup.exe**](Retracted) | Windows 10+ |
+| Linux (DEB) | [:material-download: **OpenJarvis.deb**](Retracted) | Ubuntu, Debian |
+| Linux (RPM) | [:material-download: **OpenJarvis.rpm**](Retracted) | Fedora, RHEL |
+| Linux (AppImage) | [:material-download: **OpenJarvis.AppImage**](Retracted) | Any distro |
 
 !!! tip "All releases"
-    Browse all versions on the [GitHub Releases](https://github.com/open-jarvis/OpenJarvis/releases) page.
+    Browse all versions on Retracted.
 
 ### macOS: "app is damaged" fix
 
@@ -69,7 +68,7 @@ The backend (Ollama, Python API server, inference) runs separately on your machi
 ### Build from source
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis/desktop
 npm install
 npm run tauri build
@@ -87,7 +86,7 @@ your machine and the frontend connects via `localhost`.
 ### One-command setup
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 ./scripts/quickstart.sh
 ```
@@ -107,7 +106,7 @@ If you prefer to run each step yourself:
 === "Step 1: Clone and install"
 
     ```bash
-    git clone https://github.com/open-jarvis/OpenJarvis.git
+    git clone Retracted
     cd OpenJarvis
     uv sync --extra server
     cd frontend && npm install && cd ..
@@ -154,7 +153,7 @@ programmatically. Every feature is accessible from the terminal.
 ### Install
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 uv sync
 ```
@@ -202,7 +201,7 @@ For programmatic access, the `Jarvis` class provides a high-level sync API.
 ### Install
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 uv sync
 ```

@@ -16,7 +16,7 @@ All contributors with merged pull requests will be acknowledged as contributors 
 
 We're giving away a Mac Mini to one lucky contributor! Install OpenJarvis on your personal machine and opt in via the desktop app to share anonymized savings data (FLOPs, dollar cost, energy) for a chance to win. Your data is fully anonymous — no IP, no hardware info beyond savings metrics. You must share your email via the desktop app to be eligible.
 
-See the [Savings Leaderboard](https://open-jarvis.github.io/OpenJarvis/leaderboard/) for details.
+See the [Savings Leaderboard](Retracted) for details.
 
 ### Path to Maintainership
 
@@ -28,7 +28,7 @@ Consistent contributors can grow into project maintainers:
 
 ### Recognition
 
-Contributors are recognized in release notes and on our GitHub repository.
+Contributors are recognized in release notes Retracted.
 
 ---
 
@@ -43,7 +43,7 @@ These are great starting points for new contributors:
 - New eval datasets and scorers
 - Test coverage improvements
 
-Look for issues labeled [`good-first-issue`](https://github.com/open-jarvis/OpenJarvis/labels/good-first-issue).
+Look for issues labeled [`good-first-issue`](Retracted).
 
 ### Ideal Contributions
 
@@ -83,7 +83,7 @@ To avoid wasted effort, note that PRs in these categories are unlikely to be mer
 ### Setup
 
 ```bash
-git clone https://github.com/open-jarvis/OpenJarvis.git
+git clone Retracted
 cd OpenJarvis
 uv sync --extra dev
 ```
@@ -104,8 +104,8 @@ For detailed development setup, code conventions, and project structure, see the
 
 ## Claiming Issues
 
-1. Browse the [Roadmap](https://open-jarvis.github.io/OpenJarvis/development/roadmap/) for an item that interests you
-2. Check if a [GitHub issue](https://github.com/open-jarvis/OpenJarvis/issues) already exists for it — if not, [open one](https://github.com/open-jarvis/OpenJarvis/issues/new/choose) describing what you'd like to work on
+1. Browse the [Roadmap](Retracted) for an item that interests you
+2. Check if a [GitHub issue](Retracted) already exists for it — if not, [open one](Retracted) describing what you'd like to work on
 3. Comment **"take"** on the issue to get auto-assigned
 4. Fork, branch, and start working
 
@@ -123,7 +123,7 @@ For small fixes (typos, doc improvements, simple bug fixes), go ahead and open a
 
 For larger changes — new features, refactors, new dependencies — **open an issue first** to discuss the approach. This saves everyone time by catching design issues early.
 
-Use the appropriate [issue template](https://github.com/open-jarvis/OpenJarvis/issues/new/choose):
+Use the appropriate [issue template](Retracted):
 - **Bug Report** — for bugs with reproduction steps
 - **Feature Request** — for new functionality
 - **New Eval Dataset** — for contributing benchmarks
@@ -197,5 +197,5 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/open-jarvis/OpenJarvis/discussions) for questions and help
-- Check the [documentation](https://open-jarvis.github.io/OpenJarvis/) for guides and API reference
+- Open a [Discussion](Retracted) for questions and help
+- Check the [documentation](Retracted) for guides and API reference

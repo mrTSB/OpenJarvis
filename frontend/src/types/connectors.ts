@@ -134,9 +134,7 @@ export const SOURCE_CATALOG: ConnectorMeta[] = [
         label: 'Paste the bot token below. After connecting, invite the bot to channels you want indexed by typing /invite @OpenJarvis in each channel',
       },
       {
-        label: '(Optional) Set the app icon: in the left sidebar click "Basic Information" → scroll to "Display Information" → upload the OpenJarvis logo',
-        url: 'https://github.com/open-jarvis/OpenJarvis/blob/main/assets/openjarvis-slack-icon.jpg',
-        urlLabel: 'Download icon',
+        label: '(Optional) Set the app icon: in the left sidebar click "Basic Information" → scroll to "Display Information" → upload the OpenJarvis logo (icon asset: Retracted)',
       },
     ],
     inputFields: [
